@@ -26,3 +26,6 @@ Can also update the APP_URL. I use laravel herd so any project inside herd folde
 1. usually by the time you intall this, there'll be vulnerabilities identified so run `npm audit fix`
 1. then `npm run dev`
 
+## Relations between models
+![An image to show how models relate to one another](relations_between_models.jpg "Relations between Models") 
+
