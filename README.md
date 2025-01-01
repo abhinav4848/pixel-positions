@@ -22,7 +22,11 @@ You can view the original course here: [here](https://laracasts.com/series/30-da
 1. then update `.env` as needed regarding database and mailer details.
 Can also update the APP_URL. I use laravel herd so any project inside herd folder, eg 'example' can be called just by http://example.test
 1. then run `php artisan migrate --seed` or `php artisan migrate` and `php artisan db:seed`
+1. add the symbolic link to public images folder: `php artisan storage:link`
 1. then use `npm install`. we don't use yarn in this project so can't install with yarn.
 1. usually by the time you intall this, there'll be vulnerabilities identified so run `npm audit fix`
 1. then `npm run dev`
+
+## Relations between models
+![An image to show how models relate to one another](relations_between_models.jpg "Relations between Models") 
 
