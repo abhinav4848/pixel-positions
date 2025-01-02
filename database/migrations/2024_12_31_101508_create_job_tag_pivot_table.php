@@ -11,9 +11,11 @@ return new class () extends Migration {
     public function up(): void
     {
         Schema::create('job_tag_pivot', function (Blueprint $table) {
-            $table->id();
+            // $table->id();
+            $table->primary(['job_id', 'tag_id']);
             $table->foreignIdFor(App\Models\Job::class)->constrained()->cascadeOnDelete();
             $table->foreignIdFor(App\Models\Tag::class)->constrained()->cascadeOnDelete();
+            // $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');
             $table->timestamps();
         });
     }

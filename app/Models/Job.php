@@ -20,7 +20,7 @@ class Job extends Model
 
     public function tags(): BelongsToMany
     {
-        return $this->belongsToMany(Tag::class, 'job_tag_pivot'); // using a custom pivot table name. default was job_tag
+        return $this->belongsToMany(Tag::class, 'job_tag_pivot')->withTimestamps(); // using a custom pivot table name. default was job_tag
     }
 
     public function employer(): BelongsTo
